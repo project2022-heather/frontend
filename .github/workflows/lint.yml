@@ -10,7 +10,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+      - name: install yarn
+        run: npm install -g yarn
       - name: ci
-        run: cd NodeServer && yarn install --immutable --immutable-cache --check-cache
+        run: yarn install --immutable --immutable-cache --check-cache
       - name: ESLint
-        run: cd NodeServer && yarn lint
+        run: yarn lint
