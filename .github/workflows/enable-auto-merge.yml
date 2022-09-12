@@ -5,12 +5,13 @@ on:
       - opened
       - reopened
     branches:
+      - main
       - develop
 
 jobs:
   enable-auto-merge:
     timeout-minutes: 60
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
