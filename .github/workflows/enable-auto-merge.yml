@@ -11,7 +11,8 @@ on:
 jobs:
   enable-auto-merge:
     timeout-minutes: 60
-    runs-on: self-hosted
+    # runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
